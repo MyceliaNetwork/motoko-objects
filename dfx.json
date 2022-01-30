@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "dfx": "0.9.0",
+  "canisters": {
+    "some_actor": {
+      "type": "motoko",
+      "main": "src/some_actor/main.mo"
+    },
+    "test_runner" : {
+      "type": "motoko",
+      "main": "test/actor_tests/runner.mo"
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": "vessel sources",
+      "args": ""
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  }
+}
