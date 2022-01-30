@@ -1,5 +1,7 @@
 
 import ModuleSpec "./utils/ModuleSpec";
+// Import all unit tests
+import SimpleTest "/unit_tests/simple_test";
 
 type Group = ModuleSpec.Group;
 
@@ -10,8 +12,6 @@ let skip       = ModuleSpec.skip;
 let pending    = ModuleSpec.pending;
 let run        = ModuleSpec.run;
 
-// Import all unit tests
-import SimpleTest "/unit_tests/simple_test";
 
 // Register all unit tests
 run([

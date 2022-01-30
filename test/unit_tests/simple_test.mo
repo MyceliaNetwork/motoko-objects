@@ -1,4 +1,5 @@
 import ModuleSpec "../utils/ModuleSpec";
+import Object "../../src/Objects";
 import Objects "../../src/Objects";
 
 // Test scafolding
@@ -19,8 +20,17 @@ module {
     public func getTests() : Group {
         return describe("Motoko Objects", [
             describe("Simple", [
-                it("build an object", do {
-                    
+                it("builds an object", do {
+                    // let builder = Objects.objectControllerFactory([
+                    //     ("foo", #Nat),
+                    // ]);
+
+                    // switch(builder.Builder().putNat("foo", 123).build()) {
+                    //     case (#err(_)) { assertTrue(false) };
+                    //     case (#ok(v))  {
+                    //         assertTrue(true)
+                    //     };  
+                    // };
                     assertTrue(true);
                 }),
                 skip("should skip a test", do {

@@ -96,4 +96,31 @@ module {
             case (#Object(_))           {return #Object};
         };
     };
+
+    public type ObjectInspector = object {
+        hasProperty :  (Text) -> Bool;
+        getNat :       (Text) -> Result.Result<Nat, ()>;
+        getInt :       (Text) -> Result.Result<Int, ()>;
+        getFloat :     (Text) -> Result.Result<Float, ()>;
+        getPrincipal : (Text) -> Result.Result<Principal, ()>;
+        getCallable :  (Text) -> Result.Result<ExternalCallable, ()>;
+        getBlob :      (Text) -> Result.Result<Blob, ()>;
+        getArray :     (Text) -> Result.Result<[Value], ()>;
+        getPair :      (Text) -> Result.Result<Pair, ()>;
+        getText :      (Text) -> Result.Result<Text, ()>;
+        getOptional :  (Text) -> Result.Result<?Value, ()>;
+        getObject :    (Text) -> Result.Result<MotokoObject, ()>;
+
+        mapNat :       <T>(Text, (Nat) -> (T))              -> ?T;
+        mapInt :       <T>(Text, (Int) -> (T))              -> ?T;
+        mapFloat :     <T>(Text, (Float) -> (T))            -> ?T;
+        mapPrincipal : <T>(Text, (Principal) -> (T))        -> ?T;
+        mapCallable  : <T>(Text, (ExternalCallable) -> (T)) -> ?T;
+        mapBlob :      <T>(Text, (Blob) -> (T))             -> ?T;
+        mapArray :     <T>(Text, ([Value]) -> (T))          -> ?T;
+        mapPair :      <T>(Text, (Pair) -> (T))             -> ?T;
+        mapText :      <T>(Text, (Text) -> (T))             -> ?T;
+        mapOptional :  <T>(Text, (?Value) -> (T))           -> ?T;
+        mapObject :    <T>(Text, (MotokoObject) -> (T))     -> ?T;
+    };
 }
