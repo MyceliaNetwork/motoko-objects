@@ -1,4 +1,5 @@
 import ModuleSpec "../utils/ModuleSpec";
+import Objects "../../src/Objects";
 
 // Test scafolding
 // After cloning
@@ -16,9 +17,10 @@ module {
     let run         = ModuleSpec.run;
 
     public func getTests() : Group {
-        return describe("Example Test Suite", [
-            describe("Subgroup", [
-                it("should foo", do {
+        return describe("Motoko Objects", [
+            describe("Simple", [
+                it("build an object", do {
+                    
                     assertTrue(true);
                 }),
                 skip("should skip a test", do {
