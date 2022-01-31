@@ -4,10 +4,10 @@
 ## Installing
 Add the following to your `package-set.dhall` and run `vessel verify`
 ```
- { name = "motoko-objects"
-  , repo = "https://github.com/DepartureLabsIC/motoko-objects"
-  , version = "v0.1.0"
-  , dependencies = [ "base" ]
+{ name = "motoko-objects"
+, repo = "https://github.com/DepartureLabsIC/motoko-objects"
+, version = "v0.1.0"
+, dependencies = [ "base" ]
 }
 ```
 
@@ -15,7 +15,7 @@ Add the following to your `package-set.dhall` and run `vessel verify`
 
 ```Motoko
         import Objects "mo:motoko-objects/Objects"
-        
+
         type SimpleObject = {
             foo : Nat;
             bar : Text;
