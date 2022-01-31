@@ -11,11 +11,13 @@ module {
 
     public type MotokoObject = T.MotokoObject;
 
-    public type SerializerFunc<T>   = (T, Builder.ObjectBuilder)        -> MotokoObject;
+    public type BuildResult = Builder.BuildResult;
+
+    public type SerializerFunc<T>   = (T, Builder.ObjectBuilder)        -> BuildResult;
     public type DeserializerFunc<T> = (MotokoObject, T.ObjectInspector) -> Result.Result<T, ()>;
 
     public type ObjectMapper<T> = {
-        serialize   : (T) -> MotokoObject;
+        serialize   : (T) -> BuildResult;
         deserialize : (MotokoObject) -> Result.Result<T, ()>;
     };
 
@@ -23,7 +25,7 @@ module {
         let unwrapper      = Unwrap.Unwrapper();
         let builderFactory = Builder.objectBuilderFactory(schema);
 
-        let s = func (v : T) : MotokoObject {
+        let s = func (v : T) : BuildResult {
            s0(v, builderFactory.Builder()) 
         };
 

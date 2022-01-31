@@ -26,7 +26,7 @@ module {
     public type ObjectFactory = Builder.ObjectFactory;
     public type ObjectSchema  = Builder.ObjectSchema;
 
-    public type SerializerFunc<T> = Mapper.SerializerFunc<T>;
+    public type SerializerFunc<T>   = Mapper.SerializerFunc<T>;
     public type DeserializerFunc<T> = Mapper.DeserializerFunc<T>;
 
     public func objectInspectorFactory(obj : MotokoObject) : ObjectInspector {

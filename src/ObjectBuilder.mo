@@ -21,6 +21,8 @@ module {
     public type SchemaItem = (Text, T.Type);
     public type ObjectSchema = [SchemaItem];
 
+    public type BuildResult = Result.Result<MotokoObject, List.List<BuildError>>;
+    
     public type ObjectBuilder = {
         remove : (Text)                        -> ObjectBuilder;
         
@@ -37,7 +39,7 @@ module {
         putOptional : (Text, ?Value)           -> ObjectBuilder;
         putObject : (Text, MotokoObject)       -> ObjectBuilder;
 
-        build     : ()                         -> Result.Result<MotokoObject, List.List<BuildError>>;
+        build     : ()                         -> BuildResult;
     };
 
     public type ObjectFactory = {
