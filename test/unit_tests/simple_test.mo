@@ -83,11 +83,7 @@ module {
                         };
                         case (#err(_)) {assertTrue(false)};
                     };
-                }),
-                skip("should skip a test", do {
-                    // Useful for defining a test that is not yet implemented
-                    true
-                }),
+                })
             ]),
         ])
     };

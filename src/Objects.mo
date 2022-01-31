@@ -9,11 +9,11 @@ import Text "mo:base/Text";
 import Trie "mo:base/Trie";
 import TrieSet "mo:base/TrieSet";
 
-import T "types";
-import Unwrap "Unwrap";
-import Inspector "Inspector";
-import Builder "ObjectBuilder";
-import Mapper "Mapper";
+import T "libs/types";
+import Unwrap "libs/Unwrap";
+import Inspector "libs/Inspector";
+import Builder "libs/ObjectBuilder";
+import Mapper "libs/Mapper";
 
 module {
     public type Pair             = T.Pair;
